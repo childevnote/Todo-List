@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos 앱</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="title">
+      <p>Todos 앱</p>
+    </div>
+    <div class="add-todo">
+      <p>새로운 TODO 추가하기</p>
+    </div>
+  </header>
+  <main>
+    <ul class="todo-list">
+
+      <li class="todo-item checked">
+        <div class="checkbox">✔</div>
+        <div class="todo">첫번째 할 일</div>
+        <div class="todo-item-buttons">
+          <button class="edit-button">
+            <img src="assets/icons/pencil.svg" alt="edit button">
+          </button>
+          <button class="delete-button">
+            <img src="assets/icons/delete.svg" alt="delete button">
+          </button>
+        </div>
+      </li>
+
+      <li class="todo-item">
+        <div class="checkbox"></div>
+        <div class="todo">두번째 할 일</div>
+        <div class="todo-item-buttons">
+          <button class="edit-button">
+            <img src="assets/icons/pencil.svg" alt="edit button">
+          </button>
+          <button class="delete-button">
+            <img src="assets/icons/delete.svg" alt="delete button">
+          </button>
+        </div>
+      </li>
+
+    </ul>
+  </main>
+</body>
+
+</html>
