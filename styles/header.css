@@ -1,0 +1,23 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 5px 20px 0 20px;
+}
+
+.header p {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.title p{
+
+}
+
+.add-todo p {
+  text-decoration: underline;
+}
