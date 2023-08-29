@@ -5,14 +5,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   background-color: lightblue;
-
-  height: 50px;
   border-radius: 15px;
   padding: 5px 0 5px 0;
   margin: 0 50px 20px 20px;
-  box-shadow: 4px 3px 3px 3px #999;
+  box-shadow: 3px 3px 0px 0.5px #999;
   opacity: 0.9;
 }
 
@@ -40,35 +37,31 @@
   background-color: transparent;
 }
 
-.checkbox {
+#checkbox {
   width: 20px;
   height: 20px;
   margin: 5px 5px 5px 15px;
-  border-radius: 5px;
-  border: 2px solid darkgray;
-  background-color: white;
-  cursor: pointer;
-  text-align: center;
 }
 
-.todo-item.checked .checkbox {
-  border: 2px solid darkgray;
-  color: green;
+input[id="checkbox"]:checked + .todo p {
+  text-decoration:line-through;
+  font-style: italic;
+  color: #00000066;
 }
 
 .todo {
   background-color: lightblue;
+  width: 100%;
+}
+
+.todo p {
   color: black;
   font-size: 20px;
   font-weight: 600;
   padding: 0 10px;
-  width: 100%;
+  background-color: transparent;
 }
 
-.todo-item.checked .todo {
-  font-style: italic;
-  text-decoration: line-through;
-}
 
 .todo-bottom {
   height: 3rem;
