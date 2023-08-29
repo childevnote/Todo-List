@@ -8,37 +8,23 @@
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/main.css">
-  <script src="app.js"></script>
+  <script defer src="./app.js"></script>
 </head>
 
 <body>
-  <header class="header">
-    <div class="title">
-      <p>Todos 앱</p>
+  <header id="header">
+    <div id="title">
+      <p onClick="window.location.reload()">Todos 앱</p>
     </div>
-    <div class="add-todo">
+    <div id="add-todo">
       <p>새로운 TODO 추가하기</p>
     </div>
   </header>
   <main>
     <ul class="todo-list">
-
-      <li class="todo-item checked">
-        <div class="checkbox">✔</div>
-        <div class="todo">밥 먹기</div>
-        <div class="todo-item-buttons">
-          <button class="edit-button">
-            <img src="assets/icons/pencil.svg" alt="edit button">
-          </button>
-          <button class="delete-button">
-            <img src="assets/icons/delete.svg" alt="delete button">
-          </button>
-        </div>
-      </li>
-
       <li class="todo-item">
-        <div class="checkbox"></div>
-        <div class="todo">공부하기</div>
+        <input type="checkbox" id="checkbox"/>
+        <div class="todo"><p>할 일을 추가해 보세요!</p></div>
         <div class="todo-item-buttons">
           <button class="edit-button">
             <img src="assets/icons/pencil.svg" alt="edit button">
@@ -48,7 +34,6 @@
           </button>
         </div>
       </li>
-
     </ul>
   </main>
 </body>
