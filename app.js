@@ -12,10 +12,10 @@ function createTodoItem(todoContent, index) {
 
   const $checkbox = document.createElement('input');
   $checkbox.type = 'checkbox';
-  $checkbox.id = 'checkbox-' + index; 
+  $checkbox.id = 'checkbox-' + index;
   $checkbox.className = 'checkbox';
 
-  $checkbox.addEventListener('change', () => {
+  $checkbox.addEventListener('click', () => {
     toggleComplete(index);
   });
 
@@ -73,7 +73,7 @@ $addTodo.addEventListener('click', () => {
 
     todoList.push(newTodo);
     saveTodoList();
-    renderTodoList(); 
+    renderTodoList();
   }
 });
 
@@ -98,6 +98,8 @@ function renderTodoList() {
   todoList.forEach((todo, index) => {
     const $newTodo = createTodoItem(todo.content, index);
     $todoList.appendChild($newTodo);
+    const $checkbox = document.getElementById('checkbox-' + index);
+    $checkbox.checked = todoList[index].completed;
   });
   console.log("[system] todolist rendered");
 }
@@ -107,11 +109,11 @@ function deleteTodo(index) {
   todoList.splice(index, 1);
   saveTodoList();
   renderTodoList();
-  console.log("[delete] "+index +" element deleted")
+  console.log("[delete] " + index + " element deleted")
 }
 
 $clearTodo.addEventListener('click', () => {
-  todoList=[];
+  todoList = [];
   saveTodoList();
   renderTodoList();
   console.log("[delete] clear all");
@@ -122,9 +124,10 @@ function toggleComplete(index) {
   if (index >= 0 && index < todoList.length) {
     todoList[index].completed = !todoList[index].completed;
     saveTodoList();
-    renderTodoList();
+    const $checkbox = document.getElementById('checkbox-' + index);
+    $checkbox.checked = todoList[index].completed;
   }
-  console.log("[update] "+index+" element completed toggle changed");
+  console.log("[update] " + index + " element completed toggle changed");
 }
 
 // 할일 수정 함수
@@ -152,6 +155,6 @@ function editTodo(index) {
     todoList[index].content = $input.value;
     saveTodoList();
     renderTodoList();
-    console.log("[update] "+index +" element edited to "+$input.value);
+    console.log("[update] " + index + " element edited to " + $input.value);
   });
 }
