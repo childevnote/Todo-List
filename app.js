@@ -145,12 +145,6 @@ function editTodo(index) {
   $todoText.appendChild($input);
   $input.focus();
 
-  $editButton.addEventListener('click', () => {
-    todoList[index].content = $input.value;
-    saveTodoList();
-    renderTodoList();
-  });
-
   $input.addEventListener('blur', () => {
     todoList[index].content = $input.value;
     saveTodoList();
