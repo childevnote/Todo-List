@@ -134,7 +134,6 @@ function toggleComplete(index) {
 function editTodo(index) {
   const $todoText = $todoList.children[index].querySelector('.todo');
   const $paragraph = $todoText.querySelector('p');
-  const $editButton = $todoList.children[index].querySelector('.edit-button');
 
   const $input = document.createElement('input');
   $input.type = 'text';
