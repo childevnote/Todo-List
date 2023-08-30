@@ -7,7 +7,7 @@
   align-items: center;
   background-color: lightblue;
   border-radius: 15px;
-  padding: 5px 0 5px 0;
+  height: 70px;
   margin: 0 50px 20px 20px;
   box-shadow: 3px 3px 0px 0.5px #999;
   opacity: 1;
@@ -37,19 +37,19 @@
   background-color: transparent;
 }
 
-#checkbox {
+.checkbox{
   width: 20px;
   height: 20px;
   margin: 5px 5px 5px 15px;
 }
 
-input[id="checkbox"]:checked + .todo p {
+.checkbox:checked + .todo p {
   text-decoration:line-through;
   color: #00000066;
 }
 
-input[id="checkbox"]:checked + .todo-item {
-  opacity: 0.5;
+.checkbox:checked + .todo-item {
+  opacity: 0.7;
 }
 
 .todo {
@@ -65,5 +65,13 @@ input[id="checkbox"]:checked + .todo-item {
   background-color: transparent;
 }
 
-
+.todo-input {
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 10px 20px;
+  outline:none;
+  border-bottom: 2px solid black;
+}
 
