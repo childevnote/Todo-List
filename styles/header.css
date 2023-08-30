@@ -10,11 +10,21 @@
   color: white;
   font-size: 22px;
   font-weight: 600;
-
   cursor: pointer;
 }
 
+#header-side{
+  display: flex;
+  flex-direction: row;
+}
 
-#add-todo p {
+#add-todo p,
+#clear-todo p {
   text-decoration: underline;
+}
+
+
+#add-todo ,
+#clear-todo  {
+  padding: 0 10px 0 10px;
 }
